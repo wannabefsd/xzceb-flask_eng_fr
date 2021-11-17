@@ -23,7 +23,11 @@ def english_to_french(english_text):
     """english to french"""
     fr_translation=language_translator.translate(text=english_text, model_id="en-fr").get_result()
     return fr_translation.get("translations")[0].get("translation")
+    print (fr_translation, indent=2)
+
 def french_to_english(french_text):
     """french to english"""
     en_translation=language_translator.translate(text=french_text, model_id="fr-en").get_result()
     return en_translation.get("translations")[0].get("translation")
+    print (en_translation, indent=2)
+    
